@@ -30,9 +30,23 @@ Route::get('nome/nascimento/cidade' , function (Request $request){
     $nome = $request->input('name');   
 
     $nascimento = $request->input('ano');    
-    
+
     $cidade = $request->input('cidade');   
 
 
     return ' Meu nome é ' . $nome . ' nasci no ano de ' . $nascimento . ' na cidade de ' . $cidade;  
 });   
+
+
+Route::get('Calculadora' , function (Request $request){  
+
+    $primerioNumero = $request->input('numeroUm');   
+
+    $segundoNumero = $request->input('numeroDois');   
+
+    $resultado = $primerioNumero + $segundoNumero;  
+
+    return $resultado;  
+
+
+});  
