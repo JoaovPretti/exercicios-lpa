@@ -67,3 +67,15 @@ Route::get('calculadora/dois' , function (Request $request){
 
 }); 
 
+Route::get('calculadora/divisao' , function (Request $request){ 
+
+
+    $primerioNumero = $request->input('numeroUm'); 
+
+    $segundoNumero = $request->input('numeroDois'); 
+
+    $resultado = $primerioNumero / $segundoNumero; 
+
+    return $resultado; 
+
+}); 
