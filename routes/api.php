@@ -127,12 +127,27 @@ Route::get('calculadora/divisao/dois' , function (Request $request){
 
 });
 
-Route::get('dobro' , function (Request $request){ 
+
+Route::get('dobro' , function (Request $request){
+
+    $primerioNumero = $request->input('numero');
+    $resultado = $primerioNumero * '2';
+
+    return ' O dobro do número ' . $primerioNumero . ' é ' . $resultado;
+
+});
 
 
-    $primerioNumero = $request->input('numero'); 
 
-    $resultado = $primerioNumero * '2'; 
 
-    return ' O dobro do número ' . $primerioNumero . ' é ' . $resultado;  
-}); 
+
+
+
+
+
+
+
+
+
+
+
