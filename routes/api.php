@@ -13,13 +13,3 @@ Route::get('alterar', function (Request $request){
 
  
 
-Route::get('nome/idade', function (Request $request){   
-
-
-    $nome = $request->input('name');   
-
-    $idade = $request->input('year');   
-
-    return 'Meu nome é ' . $nome . ' tenho ' . $idade . ' anos de idade ';   
-});   
- 
