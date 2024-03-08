@@ -191,6 +191,21 @@ Route::get('comissao' , function (Request $request){
 });
 
 
+Route::get('horas' , function (Request $request){
+
+    $dias = $request->input('days');
+
+    $horas = $dias * 24;
+    $minutos = $horas * 60;
+    $segundos = $minutos * 60;
+
+    return 'o total de dias foram ' . $dias . ' e o total de horas desses dias é ' . $horas . 
+        ' e possui um total de ' . $minutos . ' minutos, e um total de ' . $segundos . ' segundos';
+
+
+});
+
+
 
 
 
