@@ -170,6 +170,14 @@ Route::get('salario' , function (Request $request){
     return 'o salario era ' . $salario . ' com o aumento percentual de ' . $aumento . '% ficou ' . $resultado2;
 });
 
+Route::get('fidelidade', function (Request $request){
+
+    $valor = $request->input('produto');
+    $fidelidade = $valor / 10;
+
+    return $fidelidade;
+});
+
 
 
 
