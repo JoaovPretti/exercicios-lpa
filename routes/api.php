@@ -205,6 +205,16 @@ Route::get('horas' , function (Request $request){
 
 });
 
+Route::get('programa' , function (Request $request){
+
+    $produto = $request->input('quantidade');
+    $preço = $request->input('preço');
+
+    $resultado = $produto * $preço;
+
+    return ' A quantidade de produto foi ' . $produto . ' o preço do produto é ' . $preço . ' o total da compra foi ' . $resultado;
+
+});
 
 
 
