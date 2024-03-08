@@ -114,4 +114,15 @@ Route::get('media' , function (Request $request){
 
 }); 
 
- 
+Route::get('calculadora/divisao/dois' , function (Request $request){ 
+
+
+    $primerioNumero = $request->input('numeroUm'); 
+
+    $segundoNumero = $request->input('numeroDois'); 
+
+    $resultado = $segundoNumero / $primerioNumero; 
+
+    return $resultado; 
+
+}); 
