@@ -79,3 +79,18 @@ Route::get('calculadora/divisao' , function (Request $request){
     return $resultado; 
 
 }); 
+
+Route::get('calculadora/multiplicacao' , function (Request $request){ 
+
+
+    $primerioNumero = $request->input('numeroUm'); 
+
+    $segundoNumero = $request->input('numeroDois'); 
+
+    $resultado = $primerioNumero * $segundoNumero; 
+
+
+    return $resultado; 
+}); 
+
+ 
