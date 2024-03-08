@@ -179,7 +179,16 @@ Route::get('fidelidade', function (Request $request){
 });
 
 
+Route::get('comissao' , function (Request $request){
 
+
+    $valor = $request->input('venda');
+    $comissao = 5;
+    $salario = $valor / 100 * $comissao;
+
+    return $salario;
+
+});
 
 
 
