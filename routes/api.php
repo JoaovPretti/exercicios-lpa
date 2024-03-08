@@ -93,4 +93,25 @@ Route::get('calculadora/multiplicacao' , function (Request $request){
     return $resultado; 
 }); 
 
+Route::get('media' , function (Request $request){ 
+
+
+
+    $primeraNota = $request->input('notaUm'); 
+
+    $segundaNota = $request->input('notaDois'); 
+
+    $terceiraNota = $request->input('notaTres'); 
+
+    $quartaNota = $request->input('notaQuatro'); 
+
+    $quintaNota = $request->input('notaCinco'); 
+
+    $resultado = ($primeraNota + $segundaNota + $terceiraNota + $quartaNota +$quintaNota) / '5'; 
+
+    return $resultado; 
+
+
+}); 
+
  
