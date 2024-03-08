@@ -147,6 +147,15 @@ Route::get('retangulo' , function (Request $request){
 
 });
 
+Route::get('loja' , function (Request $request){
+    
+    $produto = $request->input('preço');
+    $desconto = $request->input('cupom');
+    $resultado = $desconto / 100 * $produto;
+    $resultado2 = $produto - $resultado;
+    
+    return ' O preço do produto sem desconto é ' . $produto . ' com o cumpom de desconto de ' . $desconto . ' % fica ' . $resultado2;
+});
 
 
 
