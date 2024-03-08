@@ -137,6 +137,17 @@ Route::get('dobro' , function (Request $request){
 
 });
 
+Route::get('retangulo' , function (Request $request){
+
+    $base = $request->input('numero1');
+    $altura = $request->input('numero2');
+    $resultado = $base * $altura;
+
+    return $resultado;
+
+});
+
+
 
 
 
