@@ -50,3 +50,20 @@ Route::get('Calculadora' , function (Request $request){
 
 
 });  
+
+
+Route::get('calculadora/dois' , function (Request $request){ 
+
+
+    $primerioNumero = $request->input('numeroUm'); 
+
+    $segundoNumero = $request->input('numeroDois'); 
+
+    $terceiroNumero = $request->input('numeroTres'); 
+
+    $resultado = $primerioNumero - $segundoNumero - $terceiroNumero; 
+
+    return $resultado; 
+
+}); 
+
