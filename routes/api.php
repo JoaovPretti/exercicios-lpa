@@ -158,6 +158,18 @@ Route::get('loja' , function (Request $request){
 });
 
 
+Route::get('salario' , function (Request $request){
+
+    $salario = $request->input('salario');
+    $aumento = $request->input('aumento');
+
+    $resultado = $aumento / 100 * $salario;
+
+    $resultado2 = $salario + $resultado;
+
+    return 'o salario era ' . $salario . ' com o aumento percentual de ' . $aumento . '% ficou ' . $resultado2;
+});
+
 
 
 
