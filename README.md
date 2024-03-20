@@ -8,7 +8,7 @@
 </p>
 
 # Exercícios API com PHP
-Este projeto contém uma série de exercícios práticos para trabalhar com API e retorno dos dados no formato JSON utilizando a linguagem PHP e o frameworf Laravel.
+Este projeto contém uma série de exercícios práticos para trabalhar com API e retorno dos dados no formato JSON utilizando a linguagem PHP e o framework Laravel.
 
 ##  Requisitos
 Certifique-se de ter os seguintes requisitos atendidos antes de começar a trabalhar nos exercícios:
