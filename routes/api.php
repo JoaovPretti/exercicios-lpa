@@ -541,6 +541,40 @@ Route::get('lista/exercicios20' , function (Request $request){
         return  $numero1 / $numero2;
     }
       
+});
 
+Route::get('exercicios/complementar1' , function (Request $request){
 
+    $nota1 = $request->input('nota1');
+    $nota2 = $request->input('nota2');
+    $nota3 = $request->input('nota3');
+    $resultado = ($nota1 + $nota2 + $nota3) / 3;
+
+    if($resultado >= 7 ){
+        return "Parabéns você foi aprovado com a média de " . $resultado;
+    }else {
+        return "Infelizmente você não foi aprovado, sua média foi de " . $resultado;
+    }
+
+});
+
+Route::get('exercicios/complementar2' , function (Request $request){
+
+   $renda = $request->input('renda');
+   if ($renda <= 1900){
+    return 'isento de imposto';
+   }if ($renda >1900){
+    if ($renda <= 2800){
+        return $renda -($renda * 7 / 100);
+    }if ($renda >2800){
+        if($renda <=3700){
+            return $renda - ($renda *15 / 100)
+        ;}if ($renda >=3700){
+            return $renda - ($renda *22 / 100);
+        }
+    }
+       
+    
+   }
+    
 });
